@@ -173,6 +173,7 @@ function nextReviewSlide() {
     reviewSlideReset();
     reviewCurrentSlide = ++reviewCurrentSlide % reviewSlide.length;
     reviewSlideSet();
+    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
 }
 
 function stopReviewSlide() {
@@ -182,8 +183,7 @@ function stopReviewSlide() {
 function showNextReviewSlide() {
     stopReviewSlide();
     nextReviewSlide();
-    reviewSlides.style.opacity = "0";
-    // reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
+    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
 }
 
 function showPrevReviewSlide() {
@@ -191,15 +191,8 @@ function showPrevReviewSlide() {
     reviewSlideReset();
     reviewCurrentSlide = (reviewCurrentSlide == 0) ? reviewSlide.length - 1 : reviewCurrentSlide - 1;
     reviewSlideSet();
-    reviewSlides.style.opacity = "0";
-    // reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing prevSlideAnimation';
+    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing prevSlideAnimation';
 }
-
-// if (showNextReviewSlide) {
-//     reviewSlide.style.animation = 'nextSlide 1s 1';
-// } else if (showPrevReviewSlide) {
-//     reviewSlide.style.animation = 'prevSlide 1s 1';
-// }
 
 
 slideReview();

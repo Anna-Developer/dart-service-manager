@@ -34,7 +34,7 @@ const servicesBlocks = document.getElementById('services__blocks');
 const servicesBlock = document.querySelectorAll('.services__block');
 const servicesBlockHidden = document.querySelectorAll('.services__block__hidden');
 
-function switchHiddenBlock(event) {
+function switchHiddenBlock() {
     servicesBlock[this.dataset.value].classList.toggle('services__block__clicked');
     servicesBlockHidden[this.dataset.value].classList.toggle('services__block__hidden-opened');
 }

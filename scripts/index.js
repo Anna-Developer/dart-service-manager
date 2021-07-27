@@ -30,63 +30,18 @@ function scrollingPosition(event) {
 }
 menu.addEventListener('click', scrollingPosition);
 
+const servicesBlocks = document.getElementById('services__blocks');
 const servicesBlock = document.querySelectorAll('.services__block');
-const servicePreview = document.querySelectorAll('.service-preview');
 const servicesBlockHidden = document.querySelectorAll('.services__block__hidden');
-// const servicesBlock1 = document.getElementById('services__block-1');
-// const servicePreview1 = document.getElementById('service-preview-1');
-// const servicesBlockHidden1 = document.getElementById('services__block__hidden-1');
-// servicePreview1.addEventListener('click', switchHiddenBlock1);
-// function switchHiddenBlock1() {
-//     servicesBlock1.classList.toggle('services__block__clicked');
-//     servicesBlockHidden1.classList.toggle('services__block__hidden-opened');
-// }
 
-// const servicesBlock2 = document.getElementById('services__block-2');
-// const servicePreview2 = document.getElementById('service-preview-2');
-// const servicesBlockHidden2 = document.getElementById('services__block__hidden-2');
-// servicePreview2.addEventListener('click', switchHiddenBlock2);
-// function switchHiddenBlock2() {
-//     servicesBlock2.classList.toggle('services__block__clicked');
-//     servicesBlockHidden2.classList.toggle('services__block__hidden-opened');
-// }
+function switchHiddenBlock(event) {
+    servicesBlock[this.dataset.value].classList.toggle('services__block__clicked');
+    servicesBlockHidden[this.dataset.value].classList.toggle('services__block__hidden-opened');
+}
 
-// const servicesBlock3 = document.getElementById('services__block-3');
-// const servicePreview3 = document.getElementById('service-preview-3');
-// const servicesBlockHidden3 = document.getElementById('services__block__hidden-3');
-// servicePreview3.addEventListener('click', switchHiddenBlock3);
-// function switchHiddenBlock3() {
-//     servicesBlock3.classList.toggle('services__block__clicked');
-//     servicesBlockHidden3.classList.toggle('services__block__hidden-opened');
-// }
-
-// const servicesBlock4 = document.getElementById('services__block-4');
-// const servicePreview4 = document.getElementById('service-preview-4');
-// const servicesBlockHidden4 = document.getElementById('services__block__hidden-4');
-// servicePreview4.addEventListener('click', switchHiddenBlock4);
-// function switchHiddenBlock4() {
-//     servicesBlock4.classList.toggle('services__block__clicked');
-//     servicesBlockHidden4.classList.toggle('services__block__hidden-opened');
-// }
-
-// const servicesBlock5 = document.getElementById('services__block-5');
-// const servicePreview5 = document.getElementById('service-preview-5');
-// const servicesBlockHidden5 = document.getElementById('services__block__hidden-5');
-// servicePreview5.addEventListener('click', switchHiddenBlock5);
-// function switchHiddenBlock5() {
-//     servicesBlock5.classList.toggle('services__block__clicked');
-//     servicesBlockHidden5.classList.toggle('services__block__hidden-opened');
-// }
-
-
-
-// ERROR
-
-// ERROR
-
-
-
-
+for (let i = 0; i < servicesBlock.length; i++) {
+    servicesBlock[i].addEventListener('click', switchHiddenBlock);
+}
 
 const slides = document.getElementById('slides');
 const slide = slides.querySelectorAll('.slide');
@@ -210,7 +165,8 @@ function reviewSlideReset() {
 }
 
 function reviewSlideSet() {
-    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
+    reviewSlides.style.animation = "nextSlide 1s 1";
+    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing';
 }
 
 function nextReviewSlide() {
@@ -226,7 +182,8 @@ function stopReviewSlide() {
 function showNextReviewSlide() {
     stopReviewSlide();
     nextReviewSlide();
-    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
+    reviewSlides.style.opacity = "0";
+    // reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing nextSlideAnimation';
 }
 
 function showPrevReviewSlide() {
@@ -234,7 +191,8 @@ function showPrevReviewSlide() {
     reviewSlideReset();
     reviewCurrentSlide = (reviewCurrentSlide == 0) ? reviewSlide.length - 1 : reviewCurrentSlide - 1;
     reviewSlideSet();
-    reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing prevSlideAnimation';
+    reviewSlides.style.opacity = "0";
+    // reviewSlide[reviewCurrentSlide].className = 'get-started__slide get-started__slide-showing prevSlideAnimation';
 }
 
 // if (showNextReviewSlide) {

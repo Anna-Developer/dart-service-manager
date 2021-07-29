@@ -707,83 +707,56 @@
         </div>
     </div>
     <section class="slider-container anime-elem" id="gallery">
-        <div class="container">
-            <h2 class="slider__title">Gallery</h2>
-            <div class="slider">
-                <form id="slider-button">
-                    <p id="toggle-radio">
-                        <span>
-                            <input type="radio" name="slider-button" checked id="first" value="0">
-                            <label for="first">First</label>
-                        </span>
 
-                        <span>
-                            <input type="radio" name="slider-button" id="second" value="1">
-                            <label for="second">Second</label>
-                        </span>
+        <h2 class="slider__title">Gallery</h2>
+        <div class="slider">
+            <form id="slider-button">
+                <p id="toggle-radio">
+                    <span>
+                        <input type="radio" name="slider-button" checked id="first" value="0">
+                        <label for="first">First</label>
+                    </span>
 
-                        <span>
-                            <input type="radio" name="slider-button" id="third" value="2">
-                            <label for="third">Third</label>
-                        </span>
+                    <span>
+                        <input type="radio" name="slider-button" id="second" value="1">
+                        <label for="second">Second</label>
+                    </span>
 
-                        <span>
-                            <input type="radio" name="slider-button" id="fourth" value="3">
-                            <label for="fourth">Fourth</label>
-                        </span>
-                        <span>
-                            <input type="radio" name="slider-button" id="fifth" value="4">
-                            <label for="fifth">Fifth</label>
-                        </span>
-                    </p>
-                </form>
-                <button class="toogle-arrow arrow-prev" id="arrow-prev"></button>
-                <ul id="slides" class="sildes">
-                    <li class="slide showing"></li>
-                    <li class="slide"></li>
-                    <li class="slide"></li>
-                    <li class="slide"></li>
-                    <li class="slide"></li>
-                </ul>
-                <button class="toogle-arrow arrow-next" id="arrow-next"></button>
-                <ul id="slides-min" class="slides-min">
-                    <li class="slide-min show-min" data-id='0'><img src="./img/slide-1.jpg" alt=""></li>
-                    <li class="slide-min" data-id='1'><img src="./img/slide-2.jpg" alt=""></li>
-                    <li class="slide-min" data-id='2'><img src="./img/slide-3.jpg" alt=""></li>
-                    <li class="slide-min" data-id='3'><img src="./img/slide-4.jpg" alt=""></li>
-                    <li class="slide-min" data-id='4'><img src="./img/slide-5.png" alt=""></li>
-                </ul>
-            </div>
+                    <span>
+                        <input type="radio" name="slider-button" id="third" value="2">
+                        <label for="third">Third</label>
+                    </span>
+
+                    <span>
+                        <input type="radio" name="slider-button" id="fourth" value="3">
+                        <label for="fourth">Fourth</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="slider-button" id="fifth" value="4">
+                        <label for="fifth">Fifth</label>
+                    </span>
+                </p>
+            </form>
+            <img src="./img/slide-arrow-left.png" alt="" class="toogle-arrow arrow-prev" id="arrow-prev">
+            <!-- <button class="toogle-arrow arrow-prev" id="arrow-prev"></button> -->
+            <ul id="slides" class="sildes">
+                <li class="slide showing"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+            </ul>
+            <img src="./img/slide-arrow-right.png" alt="" class="toogle-arrow arrow-next" id="arrow-next">
+            <!-- <button class="toogle-arrow arrow-next" id="arrow-next"></button> -->
+            <ul id="slides-min" class="slides-min">
+                <li class="slide-min show-min" data-id='0'><img src="./img/slide-1.jpg" alt=""></li>
+                <li class="slide-min" data-id='1'><img src="./img/slide-2.jpg" alt=""></li>
+                <li class="slide-min" data-id='2'><img src="./img/slide-3.jpg" alt=""></li>
+                <li class="slide-min" data-id='3'><img src="./img/slide-4.jpg" alt=""></li>
+                <li class="slide-min" data-id='4'><img src="./img/slide-5.png" alt=""></li>
+            </ul>
         </div>
     </section>
-
-    <!-- <section class="team">
-        <div class="container">
-            <div class="team__container">
-                <h2 class="team__title">
-                    Our Team
-                </h2>
-                <p class="team__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna
-                </p>
-                <div class="team__items">
-                    <div class="team__item">
-                        <div class="active-image"><img src="./img/team-2.png" alt=""></div>
-                        <h4 class="team__item__title">Sophie Turner</h4>
-                        <p class="team__item__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod
-                            tempor incididunt
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <script src="./scripts/index.js"></script>
 </body>
